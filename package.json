@@ -27,10 +27,6 @@
     ],
     "author": "Boris Okunskiy",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/inca/typesafe-event/issues"
-    },
-    "homepage": "https://github.com/inca/typesafe-event#readme",
     "devDependencies": {
         "@types/mocha": "^8.2.3",
         "@types/node": "^16.3.1",
