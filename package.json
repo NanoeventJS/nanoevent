@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Type-safe event emitter for Node.js and Browser",
     "main": "out/main/index.js",
+    "types": "out/main/index.d.ts",
     "files": [
         "out/main/**/*"
     ],
@@ -11,8 +12,14 @@
         "dev": "tsc -b -w",
         "compile": "tsc -b",
         "lint": "eslint --ext=.js,.ts,.vue --cache .",
-        "test": "NODE_ENV=test mocha"
+        "test": "NODE_ENV=test mocha",
+        "preversion": "npm run lint",
+        "version": "npm run compile",
+        "postversion": "npm publish --access=public"
     },
+    "pre-commit": [
+        "lint"
+    ],
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/inca/typesafe-event.git"
@@ -33,6 +40,7 @@
         "@ubio/eslint-config": "^1.1.6",
         "eslint": "^7.30.0",
         "mocha": "^9.0.2",
+        "pre-commit": "^1.2.2",
         "typescript": "^4.3.5"
     }
 }
