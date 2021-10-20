@@ -1,4 +1,5 @@
 import assert from 'assert';
+
 import { Event } from '../main';
 
 interface Data { foo: number }
