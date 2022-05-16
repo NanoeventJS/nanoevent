@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import { Event } from '../main';
+import { Event } from '../main/index.js';
 
 interface Data { foo: number }
 

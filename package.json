@@ -2,6 +2,11 @@
     "name": "typesafe-event",
     "version": "1.1.0",
     "description": "Type-safe event emitter for Node.js and Browser",
+    "type": "module",
+    "sideEffects": false,
+    "exports": {
+        "import": "./out/main/index.js"
+    },
     "main": "out/main/index.js",
     "types": "out/main/index.d.ts",
     "files": [
