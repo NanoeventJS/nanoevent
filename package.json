@@ -5,7 +5,7 @@
     "type": "module",
     "sideEffects": false,
     "exports": {
-        "import": "./out/main/index.js"
+        ".": "./out/main/index.js"
     },
     "main": "out/main/index.js",
     "types": "out/main/index.d.ts",
