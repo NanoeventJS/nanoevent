@@ -10,7 +10,7 @@ resized.on(ev => console.log(`Resized from ${ev.oldSize} to ${ev.newSize}`));
 resized.emit({ oldSize: 3, newSize: 5 });
 ```
 
-Highlights:
+## Highlights
 
 - strongly typed
 - no dependencies
