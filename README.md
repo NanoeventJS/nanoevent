@@ -12,10 +12,10 @@ resized.emit({ oldSize: 3, newSize: 5 });
 
 ## Highlights
 
-- strongly typed
-- no dependencies
-- super-lightweight (adds just few hundred bytes to bundle size)
-- no fancy features, only bare essentials are supported
+- 🔥 Zero dependencies
+- 🗜 Tidy and compact
+- 💻 Works in browser
+- 🔬 Strongly typed
 
 ## Usage
 
