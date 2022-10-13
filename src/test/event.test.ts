@@ -59,4 +59,18 @@ describe('Event', () => {
         assert.deepStrictEqual(emitted, []);
     });
 
+    it('invokes listeners in groups', () => {
+        let count = 0;
+        const emitter = new Event<Data>();
+        for (let g = 0; g < 1000; g++) {
+            for (let l = 0; l < 1000; l++) {
+                emitter.on(ev => {
+                    count += ev.foo;
+                }, g);
+            }
+        }
+        emitter.emit({ foo: 1 });
+        assert.strictEqual(count, 1000_000);
+    });
+
 });
