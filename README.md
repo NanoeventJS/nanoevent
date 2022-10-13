@@ -22,6 +22,8 @@ resized.emit({ oldSize: 3, newSize: 5 });
 ```ts
 import { Event } from '@flexent/event';
 
+type Weather = 'sunny' | 'cloudy' | 'snowy';
+
 interface WeatherChangedEvent {
     oldWeather: Weather;
     newWeather: Weather;
@@ -52,6 +54,35 @@ const unsubscribe = weatherChanged.on(ev => {
     }
 });
 ```
+
+### Subscriber groups
+
+You can use subscriber groups to quickly delete listeners.
+
+This is especially useful if you use classes and do not want to store references to unsubscribe function returned by `on` and `once`.
+
+```ts
+// Subscriber groups can be used to quickly unsubscribe (super useful in classes!)
+class SomeSubscriber {
+
+    desiredWeather: Weather = 'sunny';
+
+    subscribe() {
+        // 1. Notice the second argument, `this` is our group identifier (can be anything except null)
+        weatherChanged.on(ev => this.onWeatherChanged(ev), this);
+    }
+
+    onWeatherChanged(ev: WeatherChangedEvent) {
+        if (ev.newWeather === this.desiredWeather) {
+            console.log('Finally what we were waiting for!');
+            // 2. Unsubscribe all listeners of group `this`
+            weatherChanged.removeAll(this);
+        }
+    }
+}
+```
+
+### Trivia
 
 It is advisable to adopt a naming conventions for the events and payload types.
 
