@@ -1,6 +1,6 @@
 {
     "name": "@nodescript/event",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "Type-safe event emitter for Node.js and Browser",
     "type": "module",
     "sideEffects": false,
