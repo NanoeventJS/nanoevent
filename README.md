@@ -20,7 +20,7 @@ resized.emit({ oldSize: 3, newSize: 5 });
 ## Usage
 
 ```ts
-import { Event } from '@flexent/event';
+import { Event } from '@nodescript/event';
 
 type Weather = 'sunny' | 'cloudy' | 'snowy';
 
@@ -89,7 +89,7 @@ It is advisable to adopt a naming conventions for the events and payload types.
 Also, it's often convenient to group all related events into a single "event bus":
 
 ```ts
-import { Event } from '@flexent/event';
+import { Event } from '@nodescript/event';
 
 class ChatEvents {
     roomCreated = new Event<Room>();
