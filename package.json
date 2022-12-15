@@ -1,6 +1,6 @@
 {
-    "name": "@nodescript/event",
-    "version": "2.1.1",
+    "name": "nanoevent",
+    "version": "0.0.0",
     "description": "Type-safe event emitter for Node.js and Browser",
     "type": "module",
     "sideEffects": false,
@@ -27,7 +27,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com/nodescript/event.git"
+        "url": "git+ssh://git@github.com/NanoeventJS/nanoevent.git"
     },
     "keywords": [
         "typed",
